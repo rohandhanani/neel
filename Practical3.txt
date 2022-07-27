@@ -1,0 +1,113 @@
+Name = Kushwaha Rahul Shri Ravindra
+Roll No = 13
+Subject Name = java web development(101)
+
+Member.java
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package practical3;
+import java.util.Scanner;
+/**
+ *
+ * @author Rahul
+ */
+public class Member {
+   String name;
+   int age;
+   String address;
+   int salary;
+   
+   public void InsertData(){
+      Scanner sc = new Scanner(System.in); 
+      System.out.println("Enter Name");
+      name = sc.nextLine();
+      System.out.println("Enter Age");
+      age = sc.nextInt();   
+      System.out.println("Enter Address");
+      address = sc.nextLine();
+      System.out.println("Enter Salary");
+      salary = sc.nextInt();
+   }
+
+  public void printSalary(){
+    System.out.println("Name:"+name);
+    System.out.println("Age:"+age);
+    System.out.println("Address:"+address);
+    System.out.println("Salary:"+salary);
+  }
+}
+
+
+Employee.java
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package practical3;
+
+/**
+ *
+ * @author Rahul
+ */
+public class Employee extends Member{
+   String specialization = "Employee"; 
+   
+   public void printSpe(){
+       System.out.println("Specialization:"+specialization);
+   }
+}
+
+
+Manager.java
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package practical3;
+
+/**
+ *
+ * @author Rahul
+ */
+public class Manager extends Member {
+     String department = "Manager";
+     
+     public void printDeprt(){
+         System.out.println("Department:"+department);
+     }
+}
+
+Main.java
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package practical3;
+/**
+ *
+ * @author Rahul
+ */
+
+public class Practical3 {
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+         Employee e = new Employee();
+         Manager m = new Manager();
+         e.InsertData();  
+         e.printSalary();
+         e.printSpe();
+         m.InsertData();
+         m.printSalary();
+         m.printDeprt();
+         
+        
+    }
+    
+}
+
+
