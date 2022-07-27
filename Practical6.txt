@@ -1,0 +1,101 @@
+Shape.class
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package practical6;
+
+/**
+ *
+ * @author Rahul
+ */
+public class Shape {
+    public void PrintShape(){
+        System.out.println("This is shape class ");
+    }
+}
+
+
+Rectangle.class
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package practical6;
+
+/**
+ *
+ * @author Rahul
+ */
+public class Rectangle extends Shape{
+    public void PrintRect(){
+        System.out.println("This is Rectangle:");
+    }
+}
+
+Circle.class
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package practical6;
+
+/**
+ *
+ * @author Rahul
+ */
+public class Circle extends Shape{
+    public void PrintCircle(){
+        System.out.println("This is Circle class:");
+    }
+    
+}
+
+
+Square.class
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package practical6;
+
+/**
+ *
+ * @author Rahul
+ */
+public class Square extends Rectangle{
+    public void printSquare(){
+        System.out.println("This is Square class:");
+    }
+}
+
+
+main.java
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package practical6;
+
+/**
+ *
+ * @author Rahul
+ */
+public class Practical6 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Square s = new Square();
+        s.PrintRect();
+        s.PrintShape();
+        s.printSquare();
+        Circle c =new Circle();
+        c.PrintCircle();
+       
+    }
+    
+}

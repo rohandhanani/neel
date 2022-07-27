@@ -1,0 +1,78 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package practical5;
+
+Rectangle.class
+
+/**
+ *
+ * @author Rahul
+ */
+public class Rectangle {
+    int length;
+    int breadth;
+    
+   public Rectangle(int l , int b){
+       this.length = l;
+       this.breadth = b;
+   } 
+   public void PrintRectangle(){
+       System.out.println("Rectangle:"+(length*breadth));
+   } 
+    public void PrintParameters(){
+       System.out.println("Parameters Rectangle:"+(2*(length*breadth)));
+   }
+}
+
+
+Square.class
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package practical5;
+
+/**
+ *
+ * @author Rahul
+ */
+public class Square extends Rectangle {
+    public Square(int s){
+        super(s,s);
+    }
+}
+
+
+Main.java
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package practical5;
+
+/**
+ *
+ * @author Rahul
+ */
+public class Practical5 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Rectangle r = new Rectangle(4,5);
+        Square s = new Square(8);
+        
+        r.PrintRectangle();
+        r.PrintParameters();
+        
+        s.PrintRectangle();
+        s.PrintParameters();
+    }
+    
+}
+
